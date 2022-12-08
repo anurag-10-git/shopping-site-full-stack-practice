@@ -1,0 +1,46 @@
+.add-pro-form {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 .2rem rgba(0, 0, 0, 0.7);
+    padding: 3rem 2rem;
+    border-radius: .5rem;
+}
+
+.btn {
+    width: 100%;
+    background-color:rgb(255, 213, 0);
+    border: .1rem solid rgb(255, 149, 0);
+    padding: 0.6rem 1.2rem;
+    border-radius: .3rem;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+}
+
+.form-container {
+    height: 100vh;
+}
+
+.add-pro-form div {
+    padding: 1rem;
+}
+
+.add-pro-form div input {
+    width: 100%;
+    border: .2rem solid rgb(255, 213, 0);
+    padding: .2rem;
+    border-radius: .3rem;
+}
+
+.add-pro-form div input:focus {
+    border: .2rem solid rgb(255, 149, 0);
+    outline: none;
+}
+
+.add-pro-form div label {
+    font-size: 1.6rem;
+}
+
+
