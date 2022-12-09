@@ -38,7 +38,9 @@
 .product-container img{
     max-height: 20rem;
     max-width: 100%;
+    border: .1rem solid rgba(255, 179, 0, 0.84);
     box-shadow: 0 0 .2rem rgba(68, 68, 68, 0.845) ;
+
 }
 
 
