@@ -38,7 +38,9 @@ a:visited {
     justify-content:space-between;
     padding:1.5rem 2.5rem;
     align-items: center;
-    background-color: rgba(16, 14, 14, 0.482);
+    background-color: rgb(255, 213, 0);
+    border-bottom: 0.1rem solid  rgba(255, 179, 0, 0.84) ;
+    box-shadow: 0 0.1rem 1rem rgba(53, 53, 53, 0.477);
 }
 
 .navbar ul {
@@ -46,25 +48,25 @@ a:visited {
     list-style: none;
     column-gap: 2.6rem;
     font-size: 2.1rem;
-    color: rgb(255, 213, 0);
+    color: #333;
     margin-right: 5rem;
 }
 
 .navbar ul li {
-    text-shadow: 0 0 .2rem rgba(0, 0, 0, 0.797);
+    
     cursor: pointer;
 }
 
-.navbar ul li:hover {
-    color: rgba(255, 179, 0, 0.84);
+.navbar ul li a:hover {
+    color: rgba(72, 72, 72, 0.735); 
 }
 
-.navbar ul li:active {
-    color: rgb(255, 213, 0)
+.navbar ul li a:active {
+    color: rgba(72, 72, 72, 0.735); 
 }
 
 .navbar ul li a {
-    color: rgb(255, 213, 0)
+    color: #333;
 }
 
 .navbar span {

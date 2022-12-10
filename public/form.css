@@ -1,6 +1,6 @@
 .add-pro-form {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     box-shadow: 0 0 .2rem rgba(0, 0, 0, 0.7);
@@ -34,7 +34,8 @@
     border-radius: .3rem;
 }
 
-.add-pro-form div input:focus {
+.add-pro-form div input:focus,
+textarea:focus {
     border: .2rem solid rgb(255, 149, 0);
     outline: none;
 }
@@ -43,4 +44,11 @@
     font-size: 1.6rem;
 }
 
+textarea {
+    width: 100%;
+    border: .2rem solid rgb(255, 213, 0);
+    padding: .2rem;
+    resize: none;
+    border-radius: .3rem;
+}
 

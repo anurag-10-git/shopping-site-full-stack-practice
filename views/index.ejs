@@ -4,21 +4,26 @@
 <body>
     <%- include('includes/header.ejs') %>
     <main>
+        <% if(prods.length > 0) { %>
         <div class="all-products">
+            <% for (let product of prods){ %>
+
             <div class="product-container">
                
-                    <img src="https://contents.mediadecathlon.com/p1484240/ab565f3675dbdd7e3c486175e2c16583/p1484240.jpg" alt="">
+                    <img src="<%= product.imageUrl %>" alt="">
     
                 <div class="content">
-                    <h1>title </h1>
-                    <span>$100</span>
+                    <h1><%= product.title %> </h1>
+                    <span>$<%= product.price %></span>
                     <p>High-quality nike brand shirt pure cotton, sports-edition better than others!</p>
                 </div>  
                 <button class="btn" type="submit"> add to cart</button>
             </div>
-            
+            <% } %>
         </div>
-        
+        <% } else { %>
+          <h1>No Product Found!</h1>
+          <% } %>
     </main>
 </body>
 </html>
