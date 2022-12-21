@@ -11,3 +11,14 @@ exports.getIndex = (req,res,next)=>{
     })
 }
 
+exports.getProductDetail = (req,res,next) => {
+  const prodId = req.params.productId;
+  Product.findById(prodId).then(product => {
+    res.render('product-details',{
+      product: product
+    })
+  }).catch(err => {
+    console.log(err);
+  })
+};
+

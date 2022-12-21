@@ -82,9 +82,9 @@ a:visited {
     color:#222;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1250px){
     html {
-        font-size: 55%;
+        font-size: 57%;
     }
 }
 
@@ -96,6 +96,10 @@ a:visited {
    .navbar {
     flex-direction: column;
     row-gap: 2.5rem;
+   }
+
+   .all-products {
+    padding: 3rem 4rem !important;
    }
 }
 
