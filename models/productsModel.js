@@ -40,6 +40,11 @@ class Product {
       console.log(err);
     })
    }
+
+   static deleteById(prodId) {
+    const db = getDb();
+    return db.collection('productsStorage').deleteOne({_id: new mongodb.ObjectId(prodId)});
+   }
 }
 
 module.exports = Product;

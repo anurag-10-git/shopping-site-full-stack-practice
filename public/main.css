@@ -7,8 +7,7 @@
 }
 
 html {
-    font-size: 62.5%;
-   
+    font-size: 62.5%; 
 }
 
 body {
@@ -38,11 +37,43 @@ a:visited {
     /* max-width: 100%; */
     display: flex;
     justify-content:space-between;
-    padding:1.5rem 2.5rem;
+    padding:2.5rem 2.5rem;
     align-items: center;
     background-color: rgb(255, 213, 0);
     border-bottom: 0.1rem solid  rgba(255, 179, 0, 0.84) ;
     box-shadow: 0 0.1rem 1rem rgba(53, 53, 53, 0.477);
+}
+
+.navbar form {
+    width: 40vw;
+    display: flex;
+    background: white;
+    padding: .2rem 1rem;
+    padding-right: 0.5rem;
+    border-radius: 2px;
+}
+
+#search {
+    width:100%;
+    border: none;
+    padding: 0.4rem;
+}
+
+#search:focus {
+    outline: none;
+}
+
+#search+button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+button img {
+   height: 3rem;
+   filter: grayscale(60%);
 }
 
 .navbar ul {

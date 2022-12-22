@@ -1,7 +1,9 @@
 const Product = require('../models/productsModel');
 
 exports.getAddProducts = (req,res,next) => {
-    res.render('add-products');
+    res.render('add-products',{
+        editing: false
+    });
 }
 
 exports.postAddProducts = (req, res, next) => {
@@ -18,4 +20,40 @@ exports.postAddProducts = (req, res, next) => {
     }).catch(err => {
         console.log(err);
     })
+}
+
+exports.getAdminControl = (req,res,next) => {
+    Product.fetchAll().then(products => {
+     res.render('admin-control',{
+        prods: products
+      });
+    }).catch(err => {
+        console.log(err);
+    })
+}
+
+exports.postDeleteProduct = (req,res,next) => {
+   const prodId = req.body.productId;
+ Product.deleteById(prodId).then(()=>{
+    console.log('product deleted');
+    res.redirect('/admin/admin-control');
+ }).catch(err => console.log(err));
+}
+
+exports.getEditProduct = (req, res, next) => {
+    const editMode = req.query.edit;
+    if(!editMode){
+        return;
+    }
+    const prodId = req.params.productId;
+    Product.findById(prodId).then((product) => {
+        if(!product) {
+            return res.redirect('/');
+        }
+
+        res.render('add-products',{
+            editing: editMode,
+            product: product,
+        });
+    }).catch(err => console.log(err));
 }
