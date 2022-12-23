@@ -47,13 +47,38 @@ exports.getEditProduct = (req, res, next) => {
     }
     const prodId = req.params.productId;
     Product.findById(prodId).then((product) => {
+        console.log('this is product ',product);
         if(!product) {
             return res.redirect('/');
         }
-
+        
         res.render('add-products',{
-            editing: editMode,
+            editing: true,
             product: product,
         });
+    }).catch(err => console.log(err));
+}
+
+exports.postEditProduct = (req ,res, next) => {
+    const prodId = req.body.productId;
+    const updatedName = req.body.name;
+    const updatedPrice = req.body.price;
+    const updatedImageUrl = req.body.imageUrl;
+    const updatedDesc = req.body.description;
+    
+    console.log('this is request body',req.body);
+    console.log(prodId , updatedDesc, updatedName, updatedImageUrl, updatedPrice );
+
+    const product = new Product(
+        updatedName,
+        updatedImageUrl,
+        updatedPrice,
+        updatedDesc,
+        prodId
+    );
+
+    product.save().then( result => {
+        console.log('Product Updated');
+        res.redirect('/')
     }).catch(err => console.log(err));
 }

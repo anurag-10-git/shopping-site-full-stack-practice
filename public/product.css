@@ -9,13 +9,12 @@ html {
     justify-content:flex-start;
     gap: 3rem;
     padding: 5rem 7.4rem; 
-    justify-content:flex-start;
-       
+    justify-content:flex-start;       
 }
 
 form {
     height: 100%;
-  width: 100%;
+    width: 100%;
 }
 
 .button-container {
@@ -60,12 +59,11 @@ form {
    
 }
 
-.product-container img{
+.product-container img {
     max-height: 20rem;
-    max-width: 100%;
+    width: 100%;
     border: .1rem solid rgba(255, 179, 0, 0.84);
-    box-shadow: 0 0 .2rem rgba(68, 68, 68, 0.845) ;
-
+    box-shadow: 0 0 .2rem rgba(68, 68, 68, 0.845);
 }
 
 
@@ -80,6 +78,7 @@ form {
      overflow: hidden;
      white-space: nowrap;
      text-overflow: ellipsis;
+     text-transform: capitalize;
     }
 
     .content h1 a:hover {
