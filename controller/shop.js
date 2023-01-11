@@ -1,7 +1,7 @@
 const Product = require("../models/productsModel");
 
 exports.getIndex = (req,res,next)=>{
-    Product.fetchAll().then(products => {
+    Product.find().then(products => {
       res.render('index', {
         prods: products
       })
@@ -21,3 +21,10 @@ exports.getProductDetail = (req,res,next) => {
   })
 };
 
+
+exports.postCart = (req,res,next) => {
+  const productId = req.body.productId;
+  Product.findById(productId).then(product=>{
+    console.log("This is your product",product);
+  })
+}

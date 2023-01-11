@@ -15,10 +15,11 @@
             <span></span>
         </div>
         <span class="price">$<%= product.price %></span>
-        <div class="button-container">
-            <button class="btn">Add to Cart</button>
-            <button class="btn">Back to Shopping →</button>
-        </div>
+        <form class="button-container" action="/post-cart" method="post">
+            <button class="btn" type="submit">Add to Cart</button>
+            <input type="hidden" name="productId" value="<%=product._id %>">
+            <button class="btn"><a href="/">Back to Shopping →</a></button>
+        </form>
      </div>
 </div>
     
